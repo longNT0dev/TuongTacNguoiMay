@@ -1,0 +1,243 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+html {
+    min-width: 360px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Container */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 80vh;
+    background-color: whitesmoke;
+}
+
+#checkout_form, #checkout_pay, #checkout_cart {
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+#checkout_page {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    flex: 50%;
+    margin:1.5em auto;
+    gap: 1.5em;
+    font-size: 20px;
+    max-width: 850px;
+}
+
+#checkout_form {
+    display: grid;
+    padding: 1.5em;
+    border: 1px solid gray;
+    row-gap: 20px;
+   
+}
+
+#checkout_form input {
+    height: 40px;
+    padding-left: 4px;
+}
+
+
+#checkout_form h1 {
+    font-size: 20px;
+}
+
+#checkout_cart h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#checkout_pay {
+    flex: 30%;
+    display: grid;
+    padding: 1em;
+    border: 1px solid gray;
+}
+
+#checkout_pay h1 {
+    font-size: 20px;
+}
+
+#checkout_pay form {
+    display: grid;  
+}
+
+#checkout_pay label {
+    font-size: clamp(15px, 2vw, 20px)
+}
+
+#checkout_cart {
+    flex: 50%;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid gray;
+    margin: 0 auto 1.5em;
+    padding: 1.5em;
+    font-size: 20px;
+    max-width: 850px;
+}
+
+/* List sản phẩm */
+
+#cart_items{
+    overflow-y: scroll;
+    height: clamp(200px, 35vw, 550px);
+    padding: 5px;
+}
+
+.cart_items_list {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    height: 5em;
+}
+
+.li_name {
+    display: flex;
+    align-items: center;
+    flex: 40%;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.li_soluong {
+    flex: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.li_dongia {
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: fit-content;
+}
+
+.li_tongtien {
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: fit-content;
+}
+
+.li_soluong button {
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+}
+
+.li_delete {
+    flex: 15%;
+    padding: 5px;
+    min-width: 30px;
+  
+}
+
+.li_delete button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.li_delete button:hover {
+    background-color: rgb(255, 196, 196);
+}
+
+#coupon {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#coupon input, #coupon button {
+    padding: 0.5em;
+    border: 1px solid gray;
+}
+
+#coupon button {
+    color: white;
+    background-color: gray;
+}
+
+#coupon button:hover {
+    background-color: darkgray;
+}
+
+.total_cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2em;
+}
+
+#buy_btn {
+    text-align: center;
+    color: black;
+    background-color: rgb(243, 193, 202);
+    padding: 0.5em;
+    font-size: 17px;
+    border-radius: 12px 12px 12px 12px;
+    cursor: pointer;
+}
+
+#buy_btn:hover {
+    text-align: center;
+    color: black;
+    background-color: #ffcac1;
+    padding: 0.5em;
+    font-size: 17px;
+    border-radius: 12px 12px 12px 12px;
+}
+
+
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1150px) {
+    #checkout_cart,#checkout_page {
+        width: 80%;
+    }
+}
+
+/* @media only screen and (max-width: 640px) {
+    #checkout_cart,#checkout_page {
+        width: 80%;
+    }
+} */
+
+
+
+.fa-trash-can {
+    cursor: pointer;
+}
